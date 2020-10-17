@@ -22,7 +22,10 @@ At each plot level we calculated basal area, aboveground biomass, number of tree
 
 #### Flight Paths 
 In Feb-Mar, 2016, LVIS was mounted in the Langley King Air and flown over selected sites in Gabon, Africa, as part of the joint NASA/ESA/DLR/AGEOS Afrisar Campaign. Data are available from 7 flights, in both Level1B and Level2 formats. The Level1b data files contain the geolocated laser waveform data for each laser footprint. The Level2 data files contain canopy top and ground elevations and relative heights derived from the Level1b data.
+DATA
 (https://lvis.gsfc.nasa.gov/Data/Maps/Gabon2016Map.html)
+Work Flow 
+(https://github.com/bobabugel/GabonProject/blob/master/Flight%20Path%20DATA%20.ipynb)
 
 ## Method 
 
