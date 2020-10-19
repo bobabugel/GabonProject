@@ -30,13 +30,18 @@ Work Flow
 ## Method 
 
 ### Finding Study Site
+For a site to be in this project the site must have a fall into a plot. Those plot need to have trees and LVIS data. 
 
 ### Looking at Lidar Returns from LEVEL 2 DATA 
+This uses data from the L2 prouduct to look at RH data by plot. 
 
+https://github.com/bobabugel/GabonProject/blob/master/AGB5_AGBgraphedwithRH25_100.ipynb
 ### Looking at Wavefroms 
+This data set looks at The L1 beam to look at the above ground RH returns. 
 
-45612
-https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG6_H5py-h5_45612.ipynb
-46644
-(https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG6_H5py-h5_46644.ipynb)
+**45612**  
+https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG6_H5py-h5_45612.ipynb  
+**46644**  
+(https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG6_H5py-h5_46644.ipynb)  
+  
 ### Using Wavefroms To find Biomass Index 
