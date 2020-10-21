@@ -34,6 +34,7 @@ For a site to be in this project the site must have a fall into a plot. Those pl
 
 ### Looking at Lidar Returns from LEVEL 2 DATA 
 This uses data from the L2 prouduct to look at RH data by plot. 
+*Exploring LiDAR–RaDAR synergy—predicting aboveground biomass in a southwestern ponderosa pine forest using LiDAR, SAR and InSAR*
 **First Plot Created**  
 https://github.com/bobabugel/GabonProject/blob/master/AGB5_AGBgraphedwithRH25_100.ipynb
 **Looking At RH & AGB by Shot**  
