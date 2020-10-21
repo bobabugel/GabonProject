@@ -34,8 +34,15 @@ For a site to be in this project the site must have a fall into a plot. Those pl
 
 ### Looking at Lidar Returns from LEVEL 2 DATA 
 This uses data from the L2 prouduct to look at RH data by plot. 
-
+**First Plot Created**  
 https://github.com/bobabugel/GabonProject/blob/master/AGB5_AGBgraphedwithRH25_100.ipynb
+**Looking At RH & AGB by Shot**  
+
+**Looking At RH & AGB by Plot**
+
+**Looking At RH & AGB by Subplot**
+
+
 ### Looking at Wavefroms 
 This data set looks at The L1 beam to look at the above ground RH returns. 
 
