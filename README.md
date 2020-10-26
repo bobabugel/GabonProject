@@ -47,11 +47,11 @@ This is data by 1 ha plots
 https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_1ha.ipynb  
 **Looking At RH & AGB by Subplot .625**
 This is data at the .625 plot level  
-https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_625ha.ipynb
-**Looking At RH & AGB by Subplot.25**  
-This is data at the .25 plot level  
-https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_025.ipynb
-### Looking at Wavefroms 
+https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_625ha.ipynb  
+**Looking At RH & AGB by Subplot.25**    
+This is data at the .25 plot level    
+https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_025.ipynb  
+### Looking at Wavefroms   
 This data set looks at The L1 beam to look at the above ground RH returns. 
 
 **45612**  
