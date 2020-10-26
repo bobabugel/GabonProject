@@ -46,6 +46,10 @@ https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perS
 This is data by 1 ha plots   
 ![](https://github.com/bobabugel/GabonProject/blob/master/img/LVIS_1_HA_plot.png)  
 https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_1ha.ipynb  
+Comparing Calculated from the sum of the trees with those Provide by the plots   
+https://github.com/bobabugel/GabonProject/blob/master/Calculated_vs_Provided_AGB.ipynb  
+![](https://github.com/bobabugel/GabonProject/blob/master/img/CalvsProvided.png)   
+
 **Looking At RH & AGB by Subplot .625**
 This is data at the .625 plot level  
 ![](https://github.com/bobabugel/GabonProject/blob/master/img/LVIS_625_HA_plot.png)  
