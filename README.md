@@ -42,7 +42,9 @@ The chart here take the sum of the AGB from each tree in the shot and add them t
 https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perShotnumber.ipynb
 
 **Looking At RH & AGB by Plot**
+This is data by 1 ha plots 
 
+https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_1ha.ipynb
 **Looking At RH & AGB by Subplot .625**
 
 **Looking At RH & AGB by Subplot.25 **
