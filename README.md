@@ -43,8 +43,9 @@ https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perS
 
 **Looking At RH & AGB by Plot**
 
-**Looking At RH & AGB by Subplot**
+**Looking At RH & AGB by Subplot .625**
 
+**Looking At RH & AGB by Subplot.25 **
 
 ### Looking at Wavefroms 
 This data set looks at The L1 beam to look at the above ground RH returns. 
