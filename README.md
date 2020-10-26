@@ -38,9 +38,8 @@ This uses data from the L2 prouduct to look at RH data by plot.
 **First Plot Created**  
 https://github.com/bobabugel/GabonProject/blob/master/AGB5_AGBgraphedwithRH25_100.ipynb  
 **Looking At RH & AGB by Shot**  
-The chart here take the sum of the AGB from each tree in the shot and add them to get there sum. That sum is then ploted against the RH value from from each shot. 
-![](https://github.com/bobabugel/GabonProject/blob/master/img/LVIS_shots_plot.png)
-
+The chart here take the sum of the AGB from each tree in the shot and add them to get there sum. That sum is then ploted against the RH value from from each shot.  
+![](https://github.com/bobabugel/GabonProject/blob/master/img/LVIS_shots_plot.png)  
 https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perShotnumber.ipynb
 
 **Looking At RH & AGB by Plot**
@@ -49,11 +48,11 @@ This is data by 1 ha plots
 https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_1ha.ipynb  
 **Looking At RH & AGB by Subplot .625**
 This is data at the .625 plot level  
-![](https://github.com/bobabugel/GabonProject/blob/master/img/LVIS_shots_plot.png)  
+![](https://github.com/bobabugel/GabonProject/blob/master/img/LVIS_625_HA_plot.png)  
 https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_625ha.ipynb  
 **Looking At RH & AGB by Subplot.25**    
 This is data at the .25 plot level    
-![](https://github.com/bobabugel/GabonProject/blob/master/img/LVIS_shots_plot.png)  
+![](https://github.com/bobabugel/GabonProject/blob/master/img/LVIS_25_HA_plot.png)  
 https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_025.ipynb  
 ### Looking at Wavefroms   
 This data set looks at The L1 beam to look at the above ground RH returns. 
