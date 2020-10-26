@@ -43,7 +43,7 @@ https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perS
 
 **Looking At RH & AGB by Plot**
 This is data by 1 ha plots 
-
+![](https://github.com/bobabugel/GabonProject/blob/master/img/LVIS_1_HA_plot.png)
 https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perPLOT_1ha.ipynb  
 **Looking At RH & AGB by Subplot .625**
 This is data at the .625 plot level  
