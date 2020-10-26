@@ -38,6 +38,8 @@ This uses data from the L2 prouduct to look at RH data by plot.
 **First Plot Created**  
 https://github.com/bobabugel/GabonProject/blob/master/AGB5_AGBgraphedwithRH25_100.ipynb  
 **Looking At RH & AGB by Shot**  
+The chart here take the sum of the AGB from each tree in the shot and add them to get there sum. That sum is then ploted against the RH value from from each shot. 
+https://github.com/bobabugel/GabonProject/blob/master/Finding_ABG5_Find_AGB_perShotnumber.ipynb
 
 **Looking At RH & AGB by Plot**
 
