@@ -1,0 +1,157 @@
+# Libs
+import matplotlib.pyplot as plt
+import numpy as np
+import pylab
+import pandas as pd
+import h5py
+import geopandas as gpd
+from shapely.geometry import *
+from geopandas.geoseries import *
+import sys
+from scipy.interpolate import make_interp_spline, BSpline
+from scipy import misc
+from scipy.ndimage import gaussian_filter
+
+
+
+
+
+
+##Import
+# L2 is the processed product
+L2 = pd.read_csv(r'D:\Gabon_Lidar\DATA\LEVEL2_0308\csv\LVIS2_Gabon2016_0308_R1808_045612.csv')
+
+# L1 is the waveform product- the 'r' is for reading
+lvis = h5py.File(r'D:\Gabon_Lidar\DATA\LEVEL1_0308\LVIS1B_Gabon2016_0308_R1808_045612.h5', 'r')
+
+# Reading get wave index from shotnumber and test if exists
+all_shotnums = np.array(lvis['SHOTNUMBER'])
+wave_idx = ''
+Zmax = ''
+wfrange = 1024
+wfsize = 1023
+
+# Process L2
+
+filter = ['SHOTNUMBER']
+L2_A = L2[filter]
+arr = L2_A.to_numpy()
+
+#This Works
+#def Import(arr):
+#    for SHOTNUMBER in arr:
+#     print(SHOTNUMBER)
+#
+#
+#Import(arr)
+
+
+for SHOTNUMBER in arr:
+        myshotnum = int(SHOTNUMBER)
+
+        # The bumps the selected shot again the shot list
+        wave_idx = np.where(all_shotnums == myshotnum)[0][0]
+
+        # extract the single waveform and elevation attributes Z0 and Z1023;
+        waveform = lvis['RXWAVE'][wave_idx]
+
+        # This extracting the Z0
+        Z0 = int(lvis['Z0'][wave_idx])
+
+
+        # This extracting the Z1023
+        Z1023 = int(lvis['Z1023'][wave_idx])
+
+        # Check if this does anything
+        x = Z0 - Z1023
+
+
+        # Converting fields to Floats
+        #ZG = float(L2['ZG'])
+        #ZT = float(L2['ZT'])
+        #RH25 = float(L2['RH25'])
+        #RH50 = float(L2['RH50'])
+        #RH75 = float(L2['RH75'])
+        #RH10 = float(L2['RH10'])
+        #RH100 = float(L2['RH100'])
+        ZG = L2['ZG']
+        ZG = np.array(ZG.values.tolist())
+        ZT = L2['ZT']
+        ZT = np.array(ZT.values.tolist())
+        RH25 = L2['RH25']
+        RH25 = np.array(RH25.values.tolist())
+        RH50 = L2['RH50']
+        RH50 = np.array(RH50.values.tolist())
+        RH75 = L2['RH75']
+        RH75 = np.array(RH75.values.tolist())
+        RH10 = L2['RH10']
+        RH10 = np.array(RH10.values.tolist())
+        RH100 = L2['RH100']
+        RH100 = np.array(RH100.values.tolist())
+        #print(RH10)
+
+        # Smooth
+        waveform = gaussian_filter(waveform, sigma=3)
+        #print(waveform)
+
+        #Normalizing
+        SIGMEAN = np.array(lvis['SIGMEAN'][wave_idx])
+        #print(SIGMEAN)
+
+        cal_wave = np.subtract(waveform, SIGMEAN)
+        cal_wave = cal_wave.reshape(cal_wave.size, 1)
+        #print(cal_wave)
+        #print(cal_wave.shape)
+        X = np.arange(1024)
+        X = X.reshape(X.size, 1)
+
+        # elevation
+        wz = X * ((Z1023 - Z0) / 1024) + Z0
+        # Height
+        wz = np.subtract(wz, ZG)
+
+
+        filter_arr = np.logical_and(RH10 < wz, wz < RH100)
+
+        # Fix this to go though each column
+        filter_arrc = np.min(filter_arr, axis=1)
+
+        ind = wz[filter_arr]
+
+        # Filtering for less than one
+        filter_arr2 = (1 < ind)
+
+        ind = ind[filter_arr2]
+
+        wz = wz[filter_arr]
+
+        #print(cal_wave)
+        #print(filter_arrc)
+        # Should be a table of 1000
+        bio = 0
+        sub_wz = wz  # - this still an array of 181
+        sub_cal_wave = cal_wave[filter_arrc]  # - this still an array of 181
+        sum_count = np.sum(sub_cal_wave)  # number 25458
+
+        dp = np.count_nonzero(sub_wz)  # 5
+        # = np.count_nonzero(sub_wz )-1
+        iii = 0
+        print(myshotnum)
+        print('Before Loop')
+        # that reads everything
+        for iii, elements in enumerate(sub_cal_wave):
+            # print(iii+1)
+            # print(sub_cal_wave[iii]/sum_count)
+            # dp[iii] = (sub_cal_wave[iii]/sum_count)
+            if (sub_wz[iii] > - 10) and (sub_wz[iii] < 0):
+                bio = 0
+                bio = bio + sub_wz[iii] * sub_wz[iii] * (sub_cal_wave[iii] / sum_count) * (-1.0);
+            else:
+                bio = 0
+                bio = bio + sub_wz[iii] * sub_wz[iii] * (sub_cal_wave[iii] / sum_count);
+
+
+        print('After Loop')
+        print(bio(SHOTNUMBER))
+        print(myshotnum)
+               #  continue
